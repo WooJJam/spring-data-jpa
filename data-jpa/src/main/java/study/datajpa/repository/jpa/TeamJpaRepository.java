@@ -5,12 +5,11 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import study.datajpa.entity.Team;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class TeamRepository {
+public class TeamJpaRepository {
     @PersistenceContext
     private EntityManager em;
 
