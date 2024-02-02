@@ -1,4 +1,4 @@
-package study.datajpa.repository;
+package study.datajpa.repository.jpa;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
