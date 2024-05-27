@@ -332,4 +332,9 @@ public class MemberRepositoryTest {
         List<Member> result = memberRepository.findLockByUsername("member1");
 
     }
+
+    @Test
+    public void calCustom() throws Exception {
+        List<Member> result = memberRepository.findMemberCustomBy();
+    }
 }  
