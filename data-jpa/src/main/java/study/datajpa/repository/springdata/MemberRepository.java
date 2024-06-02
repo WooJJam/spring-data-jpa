@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 import study.datajpa.dto.MemberDto;
 import study.datajpa.entity.Member;
 import study.datajpa.repository.MemberRepositoryCustom;
+import study.datajpa.repository.UsernameOnly;
+import study.datajpa.repository.UsernameOnlyDto;
 
 import java.util.List;
 import java.util.Optional;
@@ -68,4 +70,5 @@ public interface MemberRepository extends JpaRepository<Member, Long>, MemberRep
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     List<Member> findLockByUsername(String username);
 
+    <T> List<T> findProjectionsByUsername(@Param("username") String username, Class<T> type);
 }
